@@ -7,7 +7,7 @@ $offWhite:#F2F2F2;
 $primary:#D62027; 
 $ivory:#F9F3EC;
 $grey:#54585A;
-$richBlack:#231F20;
+$richBlack:#1d1d1f;
 $yellow:#FED107;
 $midGrey:#9EA2A2;
 $silver:#E6E7E8;
@@ -35,8 +35,8 @@ $leading-sm:20px;
 
 $small: "(max-width: 575px)";
 $smallMin: "(min-width: 640px)";
-$md: "(max-width: 768px)";
-$mdMin: "(min-width: 769px)";
+$md: "(max-width: 991px)";
+$mdMin: "(min-width: 991px)";
 $common: "(min-width: 768px) and (max-width: 1023px)";
 $tablet : "(max-width: 1025px)";
 $large : "(max-width: 1199px)";
@@ -117,15 +117,7 @@ $mainscreenmax: "(max-width:1600px)";
   }
 }
 @mixin  p2 {
-  @include paragraph(16px,300 ,24px, normal);
-  letter-spacing: 0.25px;
-
-  @media #{$md} {
-    @include paragraph(14px,300 ,20px, normal);
-  }
-  @media #{$small} {
-    @include paragraph(12px,300 ,18px, normal); 
-  }
+  @include paragraph(16px,400 ,24px, normal);
 }
 @mixin  p3 {
   @include paragraph(14px,300 ,20px, normal);

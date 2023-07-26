@@ -9,7 +9,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	transition: all 0.3s;
 }
 ::selection {
     text-shadow: none;
@@ -34,6 +33,7 @@ body {
     padding: 0;
 	background-color: $white;
 	scroll-behavior: smooth;
+	font-weight: 500;
 
 	.lity{
 		background-color: rgba(0, 88, 68 , 0.5);
@@ -71,7 +71,8 @@ blockquote {
 a {
 	text-decoration: none;
 	box-shadow: none;
-	color: $yellow;
+	color: $richBlack;
+	font-weight: 500; 
 	@include transition__common;
 	cursor: pointer;
 

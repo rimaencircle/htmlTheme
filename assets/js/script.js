@@ -75,15 +75,22 @@ $(document).ready(function () {
       });
   });
 
-    $('.sidebar_toggle').click(function(){
-        $('.humburgur').toggleClass('open');
-        // $('html').toggleClass('overflow-hidden');
+    $('.n-burgur-btn').click(function(){
+        $('.n-mobile-menu').toggleClass('open');
+        $('html').toggleClass('overflow-hidden');
     });
-    $('.close-icon').click(function(){
-        $('.humburgur').removeClass('open');
-        // $('html').toggleClass('overflow-hidden');
+    $('.n-close-btn').click(function(){
+        $('.n-mobile-menu').removeClass('open');
+        $('html').toggleClass('overflow-hidden');
     });
-
+    $('.n-search-icon').click(function(){
+      $('.n-search-popup').toggleClass('show');
+      $('html').toggleClass('overflow-hidden');
+    });
+    $('.n-search-close-icon').click(function(){
+      $('.n-search-popup').toggleClass('show');
+      $('html').toggleClass('overflow-hidden');
+    });
 });
 
     

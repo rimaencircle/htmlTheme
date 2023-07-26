@@ -11,7 +11,112 @@
     <link rel="stylesheet" href="../assets/styles/main.css" /> 
   </head>
   <body>
-    
+    <div class="main">
+        <header class="n-header" id="n-header">
+          <div class="n-desktop-menu grid-container full">
+            <div class="n-head-brand-wrapper">
+                <button class="n-burgur-btn">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 16H32" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M8 24H24" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+                <div class="n-brand">
+                  <a href="javascript:;" class="n-brand-logo" aria-label="logo and home page link">
+                    <img src="../assets/images/logo.png" alt="site-logo">
+                  </a>
+                </div>
+            </div>
+            <div class="n-main-menu">
+                <nav class="n-main-menu--nav">
+                  <ul class="menu">
+                    <li class="menu-item"> 
+                      <a href="javascript:;">demos</a>
+                    </li>
+                    <li class="menu-item"> 
+                      <a href="javascript:;">categories</a>
+                    </li>
+                    <li class="menu-item"> 
+                      <a href="javascript:;">authors</a>
+                    </li>
+                    <li class="menu-item"> 
+                      <a href="javascript:;">membership</a>
+                    </li>
+                    <li class="menu-item"> 
+                      <a href="javascript:;">style guide</a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+            <div class="n-header-specia-links">
+              <button class="n-search-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1057 14.2L17 17M16.0667 9.53333C16.0667 13.1416 13.1416 16.0667 9.53333 16.0667C5.92507 16.0667 3 13.1416 3 9.53333C3 5.92507 5.92507 3 9.53333 3C13.1416 3 16.0667 5.92507 16.0667 9.53333Z" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+                <span>search</span>
+              </button>
+              <a href="javascript:;" class="n-theme-btn">sign up</a>
+            </div>
+          </div>
+          <div class="n-mobile-menu">
+            <div class="n-mobile-menu--wrapper">
+              <div class="n-mobile-menu--header">
+                <a href="javascript:;" class="n-brand-logo" aria-label="logo and home page link">
+                  <img src="../assets/images/logo.png" alt="site-logo">
+                </a>
+                <button class="n-close-btn" aria-label="close mobile menu button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 5L5 19M19 19L5 5" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"></path>
+                  </svg>     
+                </button>
+            </div>
+            <div class="n-mobile-menu--body">
+                <nav class="n-mobile-menu--nav">
+                    <ul class="n-mobile-menu--nav--menu menu">
+                        <li class="menu-item"> 
+                          <a href="javascript:;">demos</a>
+                        </li>
+                        <li class="menu-item"> 
+                          <a href="javascript:;">categories</a>
+                        </li>
+                        <li class="menu-item"> 
+                          <a href="javascript:;">authors</a>
+                        </li>
+                        <li class="menu-item"> 
+                          <a href="javascript:;">membership</a>
+                        </li>
+                        <li class="menu-item"> 
+                          <a href="javascript:;">style guide</a>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="n-theme-btn n-sign-in-button">
+                      sign up
+                    </a>
+                </nav>
+              </div>
+              <div class="n-mobile-menu--footer">
+                  <div class="n-social-icon">
+                      <a href="javascript:;" aria-label="facebook link">
+                        <i class="fab fa-facebook"></i>
+                      </a>
+                      <a href="javascript:;" aria-label="twitter link">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </header>
+    </div>
+    <div class="n-search-popup">
+      <div class="n-search-popup--form">
+        <a href="javascript:;" class="n-search-close-icon">close</a>
+          <form class="form-wrapper">
+            <input type="text" placeholder="search here">
+            <button class="submit-btn n-theme-btn">search</button>
+          </form>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script>
