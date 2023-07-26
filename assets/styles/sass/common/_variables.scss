@@ -57,11 +57,11 @@ $mainscreenmax: "(max-width:1600px)";
     transition: all 250ms linear;
 }
 @mixin transition__common {
-    -webkit-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93); 
-    -moz-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
-    -o-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
-    -ms-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
-    transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+    -webkit-transition: all 1s cubic-bezier(0.96, 0.13, 0.34, 0.87); 
+    -moz-transition: all 1s cubic-bezier(0.96, 0.13, 0.34, 0.87);
+    -o-transition: all 1s cubic-bezier(0.96, 0.13, 0.34, 0.87);
+    -ms-transition: all 1s cubic-bezier(0.96, 0.13, 0.34, 0.87);
+    transition: all 1s cubic-bezier(0.96, 0.13, 0.34, 0.87);
 }
 
 @mixin bg-css {

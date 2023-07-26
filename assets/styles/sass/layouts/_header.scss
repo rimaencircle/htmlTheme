@@ -80,6 +80,7 @@
             width: 430px;
             background-color: $white;
             height: 100%;
+            position: relative;
 
             @media #{$small} {
                 width: 100%;
@@ -98,11 +99,12 @@
         }
         &--body{
             padding: 20px;
-        }
-        &--nav{
             overflow-x: hidden;
             overflow-y: auto;
-            padding-bottom: 101px;        
+            padding-bottom: 101px;
+        }
+        &--nav{
+           
             &--menu{
                 display: flex;
                 flex-direction: column;
@@ -113,15 +115,20 @@
                     }
                 }
             }
+            .n-theme-btn{
+                margin-top: 20px;
+            }
         }
         &--footer{
-            position: fixed;
+            position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             display: flex;
             justify-content: space-between;
             padding: 20px;
+            border-top: 1px solid $grey-25;
+            background-color: $white;
 
             .n-social-icon{
                 display: flex;
