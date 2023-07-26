@@ -1,0 +1,73 @@
+h1,h2,h3,h4,h5,h6{
+    font-family: $heading;
+    margin-bottom: 0;
+    color: $richBlack;
+    letter-spacing: initial;
+    text-transform: capitalize;
+}
+
+h1{
+    font-size: $h1-font-size; 
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $heading;
+    letter-spacing: -0.5px;
+
+    @media #{$tablet} {
+        @include paragraph(38px, 600, 42px, normal);  
+    }
+    @media #{$small} {
+        @include paragraph(20px, 600, 36px, normal); 
+    }
+}
+h2,
+.h2{
+    font-size: $h2-font-size; 
+    font-weight: 600;
+    font-family: $heading;
+
+    @media #{$md} {
+        @include paragraph(28px, 600px, 36px, normal);  
+    }
+    @media #{$small} {
+        @include paragraph(20px, 600px, 24px, normal);  
+    }
+}
+h3,
+.h3{
+    font-size: $h3-font-size;
+    font-weight: 600;
+    font-family: $heading;
+
+    @media #{$md} {
+        @include paragraph(22px, 600, 32px, normal); 
+    }
+    @media #{$small} {
+        @include paragraph(20px, 600px, 24px, normal);  
+    }
+}
+h4,
+.h4{
+    font-size: $h4-font-size;
+    font-weight: 600;
+    font-family: $heading;
+
+    @media #{$md} {
+        @include paragraph(14px, 600, 20px, normal); 
+    }
+    @media #{$small} {
+        @include paragraph(10px, 600px, 12px, normal);  
+    }
+}
+h5,.h5{
+    font-size: $h5-font-size;
+    font-style: italic;
+    font-weight: 400;
+    font-family: $heading;
+
+}
+h6{
+    font-size: $h6-font-size;
+    font-weight: 400;
+    font-family: $heading;
+}

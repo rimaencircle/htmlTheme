@@ -1,0 +1,60 @@
+.form-wrapper{
+	background-color: $yellow;
+	@include p2;
+
+	[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea{
+		padding: 20px 28px;
+		outline: 0;
+		box-shadow: none;
+		border-radius: 5px;
+		background-color: $white;
+		@include p2;
+		color: $primary;
+		&::-webkit-input-placeholder,
+		&:-moz-placeholder,
+		&:-ms-input-placeholder,
+		&::placeholder {
+			@include p2;
+			color: $primary;
+			opacity: 0.6;
+		}
+	 }
+	 input{
+		height: 40px;
+	 }
+	 textarea{
+		height: 100px;
+	 }
+
+	 label{
+		@include p3;
+		color: $white;
+		margin-bottom: 5px;
+	 }
+	input[type=submit]{
+		text-transform: uppercase;
+		@include large-fonts;
+		text-align: center;
+		font-family: $global-font;
+		border-radius: 2px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		@include transition__common;
+		min-width:180px;
+        height: 50px;
+        padding: 12px 15px;
+        position: relative;
+        z-index: 1;
+		background-color:$ivory;
+        color: $primary;
+
+		&:hover{
+			background-color: $primary;
+            color: $ivory;
+		}
+	}
+
+ }

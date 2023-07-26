@@ -1,0 +1,109 @@
+
+@mixin btn-size($width,$height,$padding, $fontSize, $lineheight) {
+    min-width: $width;
+    height: $height;
+    padding: $padding;
+    font-size: $fontSize;
+    line-height: $lineheight;
+}
+@mixin btn-color($bgColor, $color){
+    background-color: $bgColor;
+    color: $color;
+}
+@mixin btn {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative; 
+    overflow: hidden;
+    white-space: nowrap;
+    @include flex-center;
+    background: $primary;
+    color: $white;
+    font-family: $global-font;
+    letter-spacing: 1.25px;
+    border-radius: 2px;
+    @include btn-size(180px,52px,12px 24px 13px,18px, 27px); 
+    @include transition__common;
+
+
+    @media #{$md} {
+        @include btn-size(140px,42px,6px 23px 8px,14px, 20px); 
+        letter-spacing: 1.25px; 
+    }
+    @media #{$small} {
+        @include btn-size(100px,30px,7px 8px 7px,10px, 12px);
+    }
+    &:hover{
+        color: $white;
+        background-color: $black;
+        clip-path: polygon(10.8% 0%, 100% 0%, 90.2% 100%, 0% 100%); 
+    }
+    &.xs-btn{
+        @include btn-size(140px,42px,6px 23px 8px,14px, 20px); 
+        letter-spacing: 1.25px;
+
+        @media #{$small} {
+            @include btn-size(100px,30px,7px 8px 7px,10px, 12px);
+        }
+    }
+}
+
+.theme-btn{
+    z-index: 0;
+    @include btn;
+   
+    &:hover,
+    &:focus,
+    &:active:focus{
+        color: $white;
+    }
+
+    &.secondary-btn{
+        background:$black;
+        color: $white;
+        
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+.read-more-btn{
+    @include small-fonts;
+    display: flex;
+    gap: 9px;
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    color: $primary;
+
+    @media #{$small} {
+        gap: 5px;
+    }
+
+    &:hover{
+        gap: 15px;
+        color: $primary;
+
+        @media #{$small} {
+            gap: 10px;
+        }
+    }
+
+    img{
+        height: 18px;
+        width: 9px;
+        object-fit: contain;
+
+        @media #{$small} {
+            height: 8px;
+            width: 8px;
+        }
+    }
+}
+.btn-flex{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "home-hardware",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sass": "node-sass --watch assets/styles/sass --output-style compressed --precision=8 --source-map=true --output assets/styles --out-file assets/styles"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "foundation-sites": "^6.7.5",
+    "lightgallery": "^1.10.0",
+    "lity": "^2.4.1",
+    "swiper": "^8.2.2"
+  }
+}

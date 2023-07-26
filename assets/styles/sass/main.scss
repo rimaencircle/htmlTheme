@@ -1,0 +1,20 @@
+$fa-font-path: "../webfonts";
+
+// Starter tools 
+@import "../../../node_modules/foundation-sites/assets/foundation";
+@include foundation-everything; 
+@include foundation-float-classes; 
+@include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@import "common/fonts";
+@import "common/variables"; 
+@import "common/animation"; 
+@import "common/form"; 
+@import "common/global";
+@import "common/heading";
+@import "components/buttons"; 
+@import "layouts/header";
+@import "layouts/slider";
+@import "layouts/pages";  
+@import "layouts/footer";
+ 

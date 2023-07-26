@@ -1,0 +1,187 @@
+$global-font:'Open Sans'; 
+$heading:'Open Sans';
+
+$white:#ffffff;
+$black:#000000; 
+$offWhite:#F2F2F2;
+$primary:#D62027; 
+$ivory:#F9F3EC;
+$grey:#54585A;
+$richBlack:#231F20;
+$yellow:#FED107;
+$midGrey:#9EA2A2;
+$silver:#E6E7E8;
+$primary-25:rgbA(214, 32, 39,0.25);
+$yellow-25:rgbA(254, 209, 7, 0.25);
+$grey-25:rgba(103, 104, 107,0.25); 
+$white-25:rgba(255, 255, 255,0.25); 
+$black-85:rgba(0, 0, 0, 0.85); 
+
+$p1:18px;
+$p2:16px;
+$p3:14px;
+$p4:12px;
+$h1-font-size : 48px;   
+$h2-font-size : 36px; 
+$h3-font-size : 28px;
+$h4-font-size : 20px;
+$h5-font-size : 25px; 
+$h6-font-size : 22px;
+$btn-lg-font:22px;
+$btn-sm-font:11px;
+
+$leading:30px;
+$leading-sm:20px;
+
+$small: "(max-width: 575px)";
+$smallMin: "(min-width: 640px)";
+$md: "(max-width: 768px)";
+$mdMin: "(min-width: 769px)";
+$common: "(min-width: 768px) and (max-width: 1023px)";
+$tablet : "(max-width: 1025px)";
+$large : "(max-width: 1199px)";
+$largeMin: "(min-width: 1026px)";
+$xl : "(max-width: 1299px)";
+$xlMin: "(min-width: 1200px)";
+$laptop : "(max-width:1499px)";
+$desktop: "(min-width: 1024px) and (max-width: 1299.9px)";
+$largedesktop: "(min-width: 1366px) and (max-width: 1439.9px)";
+$mainscreenmin: "(min-width: 1499px)";
+$mainscreenmax: "(max-width:1600px)"; 
+
+@mixin transition {
+    -webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+    -o-transition: all 250ms linear;
+    -ms-transition: all 250ms linear;
+    transition: all 250ms linear;
+}
+@mixin transition__common {
+    -webkit-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93); 
+    -moz-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+    -o-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+    -ms-transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+    transition: all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+}
+
+@mixin bg-css {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@mixin content-center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@mixin section-padding {
+ padding: 100px 0;
+
+ @media #{$md} {
+    padding: 80px 0;
+ }
+ @media #{$small} {
+    padding: 50px 0;
+ }
+}
+@mixin section-md-padding {
+  padding: 80px 0 120px;
+ 
+  @media #{$tablet} {
+     padding: 60px 0 90px;
+  }
+  @media #{$small} {
+     padding: 30px 0 60px;
+  }
+ }
+@mixin  paragraph($fontSize, $fontWeight, $lineHeight, $letter-spacing ) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing:$letter-spacing;
+}
+@mixin  p1 {
+  @include paragraph(20px,300 ,28px, normal);
+
+  @media #{$md} {
+    @include paragraph(16px,300 ,24px,  normal);
+  }
+  @media #{$small} {
+    @include paragraph(10px,300 ,15px, normal);
+  }
+}
+@mixin  p2 {
+  @include paragraph(16px,300 ,24px, normal);
+  letter-spacing: 0.25px;
+
+  @media #{$md} {
+    @include paragraph(14px,300 ,20px, normal);
+  }
+  @media #{$small} {
+    @include paragraph(12px,300 ,18px, normal); 
+  }
+}
+@mixin  p3 {
+  @include paragraph(14px,300 ,20px, normal);
+  letter-spacing: 0.25px;
+
+  @media #{$small} {
+    @include paragraph(12px,300 ,18px, normal);
+  }
+
+}
+@mixin  small-fonts {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  @media #{$small} {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 1.25px;
+  }
+
+}
+@mixin  large-fonts {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+
+  @media #{$small} {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 1.25px;
+  }
+
+}
+@mixin  blockquote {
+  @include paragraph(40px,400 ,52px);
+}
+@mixin listing {
+  @include reset-list;
+  li{
+    @include p1;
+    position: relative;
+    padding-left: 25px;
+
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: #2B2B2B;
+    }
+  }
+}

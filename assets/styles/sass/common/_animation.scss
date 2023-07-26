@@ -1,0 +1,42 @@
+.imageAnim{
+	position: relative; 
+	overflow: hidden;
+	background-color: $primary;
+	img{
+		position: absolute;
+		left: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+.textAnim{
+	position: relative; 
+	overflow: hidden;
+}
+.labelAnim{
+	transform: translateY(-100%);
+}
+.zoomAnim{
+	img{
+		transition:all 1s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+	    transform: scale(0);
+	}
+}
+.zoomIn{
+	transform: scale(0);
+	transition: all 500ms ease;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
