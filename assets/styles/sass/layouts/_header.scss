@@ -9,7 +9,7 @@
     .menu{
         .menu-item{
             a{
-                color:$richBlack; 
+                color:var(--text-color); 
             }
         }
     }
@@ -52,10 +52,48 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                color: var(--text-color);
+
+                svg{
+                    path{
+                        stroke:$midGrey;
+                    }
+                }
+            }
+            .theme-switche{
+                background: var(--theme-switches-bg);
+                padding: 4px 9px;
+                border-radius: 19px;
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+                height: 36px;
+                width: 76px;
+                align-items: center;
+                position: relative;
+
+                svg{
+                    path{
+                        stroke:var(--text-color);
+                    }
+                }
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    height: 28px;
+                    width: 28px;
+                    border-radius: 50%;
+                    background-color:var(--theme-switches-round);
+                    @include transition__common;
+                    z-index: -1;
+                }
             }
         }
         .n-theme-btn{
-            @media #{$small} {
+            @media #{$md} {
                 display: none;
             }
         }
@@ -67,6 +105,7 @@
         left: -100%;
         bottom: 0;
         background-color: rgba($color: $ivory, $alpha: 0.5);
+        z-index: 2;
         backdrop-filter: blur(5px);
         @include transition__common;
 
@@ -78,7 +117,7 @@
             display: flex;
             flex-direction: column;
             width: 430px;
-            background-color: $white;
+            background-color: var(--light-bg);
             height: 100%;
             position: relative;
 
@@ -125,16 +164,18 @@
             left: 0;
             right: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; 
             padding: 20px;
             border-top: 1px solid $grey-25;
-            background-color: $white;
+            background-color:var(--light-bg);
 
             .n-social-icon{
                 display: flex;
                 gap: 10px;
                 align-items: center;
+                color: var(--text-color);
             }
+
         }
 
         &.open{

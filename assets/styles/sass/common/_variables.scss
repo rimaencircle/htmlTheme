@@ -4,18 +4,37 @@ $heading:'Open Sans';
 $white:#ffffff;
 $black:#000000; 
 $offWhite:#F2F2F2;
-$primary:#D62027; 
+$primary:#1852f1; 
+$secondary:#ebfaff;
 $ivory:#F9F3EC;
 $grey:#54585A;
 $richBlack:#1d1d1f;
 $yellow:#FED107;
 $midGrey:#9EA2A2;
-$silver:#E6E7E8;
-$primary-25:rgbA(214, 32, 39,0.25);
-$yellow-25:rgbA(254, 209, 7, 0.25);
+$silver:#e1e1e1;
+$primary-25:rgba(214, 32, 39,0.25);
+$midgrey-25:rgba(158, 162, 162 , 0.25%);
 $grey-25:rgba(103, 104, 107,0.25); 
 $white-25:rgba(255, 255, 255,0.25); 
 $black-85:rgba(0, 0, 0, 0.85); 
+$gradient:linear-gradient(to left, #c31432, #240b36);
+$textGradient:linear-gradient(to right, $richBlack, $white, 50%, $richBlack 100%);
+
+:root[data-color-scheme="light"] {
+  --light-bg: #{$white};
+  --text-color:#{$richBlack};
+  --theme-switches-bg:#{$midgrey-25};
+  --theme-switches-round:#{$silver};
+}
+
+:root[data-color-scheme="dark"] {
+  --light-bg: #{$richBlack};
+  --text-color: #{$ivory};
+  --theme-switches-bg:#{$grey-25};
+  --theme-switches-round:#{$grey};
+}
+
+
 
 $p1:18px;
 $p2:16px;

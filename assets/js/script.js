@@ -14,6 +14,29 @@ $(document).ready(function () {
         $('.hh_header').removeClass('is-sticky');
       }
   });
+
+  // preloading effect
+  setTimeout(function () {
+    $('.preloader').addClass('loaded');
+    if ($('.preloader').hasClass('loaded')) {
+        $('.preloader').delay(1000).queue(function() {
+          $('.main').fadeIn();
+        });
+    }
+  }, 3000);
+  
+  // change themes
+  const switchTheme = function() {
+      const rootElem = $("html[data-color-scheme]");
+      let dataTheme = rootElem.attr("data-color-scheme");
+      let newTheme = dataTheme === "light" ? "dark" : "light";
+      rootElem.attr("data-color-scheme", newTheme);
+      localStorage.setItem("color-scheme", newTheme);
+  };
+
+  // Use jQuery to select the toggle buttons and add the event listener
+  $(".theme-switche").on("click", switchTheme);
+
   $('p').each(function() {
     var $this = $(this);
     if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
@@ -91,7 +114,65 @@ $(document).ready(function () {
       $('.n-search-popup').toggleClass('show');
       $('html').toggleClass('overflow-hidden');
     });
+  
+  
+  // swiper section
+
+  var heroSwiper = new Swiper(".heroSwiper", {
+    slidesPerView: 2,
+    centeredSlides: true,
+    direction: getDirection(),
+    loop:true,
+    spaceBetween: 30,
+    speed:5000,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    on: {
+      resize: function () {
+        heroSwiper.changeDirection(getDirection());
+      },
+    },
+  });
+  var heroSwiperReverse = new Swiper(".heroSwiperReverse", {
+    slidesPerView: 2,
+    centeredSlides: true,
+    direction: getDirection(),
+    loop:true,
+    spaceBetween: 30,
+    speed:5000,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+      reverseDirection: true, 
+    },
+    on: {
+      resize: function () {
+        heroSwiperReverse.changeDirection(getDirection());
+      },
+    },
+  });
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 992 ? 'horizontal' : 'vertical';
+
+    return direction;
+  }
+  
+  var trioSwiper = new Swiper(".trioSwiper", {
+    slidesPerView: 1,
+    loop:true,
+    spaceBetween: 30,
+    speed:5000,
+    // autoplay: {
+    //   delay: 1,
+    //   disableOnInteraction: false,
+    // },
+  });
+ 
 });
+
 
     
 

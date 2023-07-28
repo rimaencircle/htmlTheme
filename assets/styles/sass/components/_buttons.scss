@@ -18,16 +18,16 @@
     overflow: hidden;
     white-space: nowrap;
     @include flex-center;
-    background: $richBlack;
     color: $white;
-    font-family: $global-font;
+    font-family: $global-font; 
     letter-spacing: 0.4px;
-    border-radius: 2px;
     @include btn-size(124px,40px,11px 24px 12px,14px, 22px); 
     @include transition__common;
     cursor: pointer;
     border-radius: 4px;
-
+    background:$gradient;
+    background-size: 200% 200%;
+    background-position: left center;
 
     @media #{$md} {
         @include btn-size(140px,42px,6px 23px 8px,14px, 20px); 
@@ -38,8 +38,7 @@
     }
     &:hover{
         color: $white;
-        background-color: $black;
-        letter-spacing: 1.25px;
+        background-position: center center;
     }
     &.xs-btn{
         @include btn-size(140px,42px,6px 23px 8px,14px, 20px); 

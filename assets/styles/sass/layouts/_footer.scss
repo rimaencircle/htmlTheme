@@ -1,0 +1,19 @@
+:root[data-color-scheme="light"] {
+
+}
+  
+:root[data-color-scheme="dark"] {
+  
+    .n-theme-btn{
+      background-position: center;
+  
+      &:hover{
+        background-position: right; 
+      }
+    }
+    .theme-switche{
+        &::after{ 
+          left: 42px !important; 
+        }
+    }
+  }

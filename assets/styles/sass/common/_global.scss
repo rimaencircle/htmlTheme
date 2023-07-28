@@ -1,9 +1,9 @@
 
 
-// * {
-//     transition: all 300ms ease-in-out;
-//     -webkit-transition: all 300ms ease-in-out;
-// }
+* {
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+}
 
 * {
     -webkit-box-sizing: border-box;
@@ -24,15 +24,13 @@ body {
     font-stretch: normal;
     position: relative;
     -webkit-font-smoothing: antialiased;
-	background-color: $white;
-    color: $richBlack;
+    color: var(--text-color);
 	@include p2;
 	overflow-x: hidden;
 	min-height: 100vh;
     margin: 0;
     padding: 0;
-	background-color: $white;
-	scroll-behavior: smooth;
+	background-color: var(--light-bg);
 	font-weight: 500;
 
 	.lity{
@@ -143,6 +141,10 @@ sup {
 sub {
     bottom: -0.25em;
 }
+// .main{
+// 	display: none;
+// 	@include transition__common; 
+// }
 .p1,
 .p1 p{
 	@include p1;
@@ -223,18 +225,32 @@ sub {
 }
 .section-title{
 	margin-bottom: 60px;
-	display: flex;
-	align-items: center;
 	gap: 40px;
 
 	h2{
 		flex: 1 0 auto;
-		color: $primary;
+		color: var(--text-color);
 		text-transform: capitalize;
+		position: relative;
 
 		@media #{$small} {
 			line-height: 44px;
 		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: -15px;
+			left: 0;
+			right: 0;
+			height:1px;
+			width: 60px;
+			margin: 0 auto;
+			background-color: $richBlack;
+		}
+	}
+	p{
+		margin-top: 30px;
 	}
 }
 
@@ -242,7 +258,7 @@ sub {
 	@include p2;
 
 	h2{
-		color: $richBlack;
+		color: var(--text-color);
 		margin-bottom: 10px;
 	}
 	.posted-date{
@@ -271,7 +287,7 @@ sub {
 			position: relative;
 			padding-left: 28px;
 			@include p2;
-			color: $richBlack;
+			color: var(--text-color);
 			font-weight: 500;
 
 			@media #{$md} {
@@ -464,6 +480,30 @@ sub {
 				}
 			}
 		}
+	}
+}
+.preloader {
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: $gradient;
+    z-index: 1800;
+    text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include transition__common;
+
+	&.loaded{
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(0, -100%);
+	}
+	.counter{
+		font-size: 100px;
+		color: $white;
 	}
 }
 .gform_ajax_spinner{
